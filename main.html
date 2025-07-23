@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>relatório confidencial 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Página 1 -->
+  <section id="pg1">
+    <div class="container">
+      <div class="emoji">🔍</div>
+      <h1>Relatório confidencial #001</h1>
+      <p>
+        Após uma longa investigação (tipo... 3 segundos olhando pra você),<br>
+        descobri um caso raro de<br>
+        **encantamento espontâneo**.<br><br>
+        Suspeita: você.<br>
+        Vítima: eu.
+      </p>
+      <button onclick="next()">ver mais provas</button>
+    </div>
+  </section>
+
+  <!-- Página 2 -->
+  <section id="pg2" class="hidden">
+    <div class="container">
+      <div class="emoji">🧠💘</div>
+      <h1>relatório #02: sintomas</h1>
+      <p>
+        sintomas identificados:<br>
+        - Sorriso involuntário ao lembrar de você<br>
+        - Coração batendo rápido<br>
+        - Vontade absurda de te mandar msg
+      </p>
+      <button onclick="next()">Decisão final</button>
+    </div>
+  </section>
+
+  <!-- Página 3 -->
+  <section id="pg3" class="hidden">
+    <div class="container">
+      <div class="emoji">📂💞</div>
+      <h1>Relatório final:</h1>
+      <p>
+        Veredito: Culpada.<br><br>
+        Diagnóstico: sintomas indicam um possível "caso grave de encantamento espontâneo" — sem cura prevista..<br><br>
+        Recomendação médica:<br>
+        - Manter contato constante<br>
+        - Sorrisos diários<br>
+        - Talvez um encontro (só para anotações científicas, claro)
+      </p>
+      <p style="margin-top: 20px; font-weight: bold;">💌 Fim do relatório confidencial.</p>
+    </div>
+  </section>
+
+  <script>
+    let page = 1;
+    function next() {
+      document.getElementById(`pg${page}`).classList.add('hidden');
+      page++;
+      document.getElementById(`pg${page}`).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
